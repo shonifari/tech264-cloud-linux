@@ -21,7 +21,7 @@
     - [Analyzing `ls -l` Output](#analyzing-ls--l-output)
       - [Example Line](#example-line)
       - [Breakdown](#breakdown)
-  - [Linux File Permissions](#linux-file-permissions-1)
+  - [Linux Numeric File Permissions](#linux-numeric-file-permissions)
     - [What Numeric Values are Assigned to Each Permission?](#what-numeric-values-are-assigned-to-each-permission)
     - [What Can You Do with the Values to Assign Read + Write Permissions?](#what-can-you-do-with-the-values-to-assign-read--write-permissions)
     - [What Value Would Assign Read, Write, and Execute Permissions?](#what-value-would-assign-read-write-and-execute-permissions)
@@ -176,11 +176,7 @@ Since you are logged in as the user who owns the file, you will have **read-only
 - **`Nov 25 18:36`**: Last modification date and time
 - **`keeprunning.sh`**: File name
 
-Sure! Here's a well-formatted Markdown document answering your questions about Linux file permissions:
-
----
-
-## Linux File Permissions
+## Linux Numeric File Permissions
 
 ### What Numeric Values are Assigned to Each Permission?
 
