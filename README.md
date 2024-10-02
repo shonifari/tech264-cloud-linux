@@ -1,12 +1,13 @@
 # Cloud & Linux
 
 - [Cloud \& Linux](#cloud--linux)
-  - [Understanding cloud](#understanding-cloud)
+  - [Cloud](#cloud)
   - [Scripting](#scripting)
-  - [Linux](#linux)
   - [Azure](#azure)
+  - [Linux](#linux)
+  - [SSH](#ssh)
 
-## Understanding cloud
+## Cloud
 
 [What is cloud?](what-is-cloud/README.md)
 
@@ -14,10 +15,14 @@
 
 [What is scripting?](scripting/README.md)
 
+## Azure
+
+[What is Azure?](azure/README.md)
+
 ## Linux
 
 [What is Linux?](linux/README.md)
 
-## Azure
+## SSH
 
-[What is Azure?](azure/README.md)
+[What is SSH?](ssh/README.md)
