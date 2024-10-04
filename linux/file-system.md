@@ -11,7 +11,7 @@
     - [Why Does the Owner, by Default, Not Receive Execute Permissions When They Create a File?](#why-does-the-owner-by-default-not-receive-execute-permissions-when-they-create-a-file)
     - [What Command is Used to Change the Owner of a File or Directory?](#what-command-is-used-to-change-the-owner-of-a-file-or-directory)
   - [Linux File Permissions](#linux-file-permissions)
-    - [Does Being the Owner of a File Mean You Have Full Permissions on That File? Explain.](#does-being-the-owner-of-a-file-mean-you-have-full-permissions-on-that-file-explain)
+    - [Does Being the Owner of a File Mean You Have Full Permissions on That File? Explain](#does-being-the-owner-of-a-file-mean-you-have-full-permissions-on-that-file-explain)
     - [If You Give Permissions to the User Entity, What Does This Mean?](#if-you-give-permissions-to-the-user-entity-what-does-this-mean)
     - [If You Give Permissions to the Group Entity, What Does This Mean?](#if-you-give-permissions-to-the-group-entity-what-does-this-mean)
     - [If You Give Permissions to the Other Entity, What Does This Mean?](#if-you-give-permissions-to-the-other-entity-what-does-this-mean)
@@ -114,7 +114,7 @@ Sure! Here's a well-formatted Markdown document answering your questions about L
 
 ## Linux File Permissions
 
-### Does Being the Owner of a File Mean You Have Full Permissions on That File? Explain.
+### Does Being the Owner of a File Mean You Have Full Permissions on That File? Explain
 
 No, being the owner of a file does not automatically mean you have full permissions on that file. The permissions for the owner are explicitly set and can vary. For example, the owner might have read and write permissions but not execute permissions. The permissions are defined by the file's mode, which includes settings for the owner, group, and others¹.
 
