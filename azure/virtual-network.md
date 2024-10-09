@@ -3,6 +3,7 @@
 - [Virtual Networks](#virtual-networks)
   - [How to create a VNet on Azure?](#how-to-create-a-vnet-on-azure)
   - [Delete an Azure VNet](#delete-an-azure-vnet)
+  - [How to add a port](#how-to-add-a-port)
 
 ## How to create a VNet on Azure?
 
@@ -29,3 +30,11 @@ To delete a VNet, follow these steps:
 2. View everything in the resource group.
 3. Click into the VNet you want to delete.
 4. Click the three dots in the upper-right corner and select **Delete**.
+
+## How to add a port
+
+1. Navigate to your VM's **network settings**.
+2. Open up **Settings** and click **inbound security rules**.
+3. Change the **destination port** to `3000`.
+4. Change protocol to **TCP**.
+5. Change the priority. The **lower** the priority, the **higher** the priority.
