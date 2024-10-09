@@ -310,4 +310,30 @@ To change the owner of a file or directory, you can use the `chown` command. The
 
 ```bash
 chown <new_owner> <file_or_directory>
+
+
+```
+
+### Print environment variables
+
+To print environment variables, you can use the `printenv` command. The syntax is:
+
+```bash
+printenv
+```
+
+### Set environment variables
+
+To print environment variables, you can use the `printenv` command. The syntax is:
+
+```bash
+export VARIABLE_NAME=VALUE
+```
+
+### Set  variables
+
+To set variables, you can use the `printenv` command. The syntax is:
+
+```bash
+VARIABLE_NAME=VALUE
 ```
