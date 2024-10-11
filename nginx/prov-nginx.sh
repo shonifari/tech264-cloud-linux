@@ -1,46 +1,30 @@
 #!/bin/bash
-CONFIGURATION_FILE="proxy.conf"
-PUBLIC_IP=123
+
 
 # Update the system package list
-echo Updating package list...
+echo "Updating package list..."
 sudo apt-get update -y
-echo Done!
- 
+echo "Done!"
+
 # Upgrade all installed packages to their latest versions
-echo Upgrading installed packages...
+echo "Upgrading installed packages..."
 sudo DEBIAN_FRONTEND=noninteractive apt-get upgrade -y
-echo Done!
+echo "Done!"
 
 # Install Nginx
-echo install nginx...
+echo "Installing Nginx..."
 sudo DEBIAN_FRONTEND=noninteractive apt-get install nginx -y
-echo Done!
+echo "Done!"
 
+# Backup the default Nginx configuration file
+sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/default.bak
 
-# Create nginx configuration file
-echo Creating nginx configuration file...
-echo "server {
-    listen 80;
-
-    server_name $PUBLIC_IP;
-
-    location / {
-        proxy_pass http://localhost:3000;  # Replace with your backend server address
-        proxy_set_header Host \$host;
-        proxy_set_header X-Real-IP \$remote_addr;
-        proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto \$scheme;
-    }
-}
-" > /etc/nginx/sites-available/$CONFIGURATION_FILE
-echo Nginx Configuration file created succsessfully!
-
-# Enable file
-sudo ln -s /etc/nginx/sites-available/$CONFIGURATION_FILE /etc/nginx/sites-enabled/
+# Use sed to update the proxy settings in the configuration file
+sudo sed -i 's|try_files $uri $uri/ =404;|proxy_pass http://localhost:3000;|' /etc/nginx/sites-available/default
 
 # Check syntax error
 sudo nginx -t
 
-# Restart NGinx
+# Restart Nginx
 sudo systemctl restart nginx
+echo "Nginx restarted."
