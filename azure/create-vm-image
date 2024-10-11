@@ -1,0 +1,5 @@
+# Creating a image
+
+```bash
+sudo waagent -deprovision+user -y
+```
