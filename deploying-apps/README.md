@@ -3,7 +3,7 @@
 - [How to deploy and webapp to Azure VM](#how-to-deploy-and-webapp-to-azure-vm)
   - [Preparing the VM environment](#preparing-the-vm-environment)
   - [Moving app through SCP](#moving-app-through-scp)
-  - [m](#m)
+  - [Running app in background](#running-app-in-background)
 
 ## Preparing the VM environment
 
@@ -17,8 +17,6 @@ We can copy folders into our VM using the scp (Secure Copy Protocol)
 scp -i ~/.ssh/<private_ssh_key> -r <source_path> <user>@<vm_public_ip>:<destination_path>
 
 ```
-
-## m
 
 We can copy folders into our VM using the scp (Secure Copy Protocol)
 
@@ -93,3 +91,7 @@ processManagement:
 ```bash
 export DB_HOST=mongodb://10.0.3.4:27017/posts
 ```
+
+## Running app in background
+
+[Run app in background](running-app-bg.md)
