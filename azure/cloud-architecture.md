@@ -1,5 +1,19 @@
 # Azure Cloud Architecture
 
+- [Azure Cloud Architecture](#azure-cloud-architecture)
+  - [Virtual Network (VNet)](#virtual-network-vnet)
+  - [Subnet](#subnet)
+  - [Resource Group](#resource-group)
+  - [Disk](#disk)
+  - [Public IP](#public-ip)
+  - [NSG Rule - Allow HTTP](#nsg-rule---allow-http)
+  - [NSG Rule - Allow SSH](#nsg-rule---allow-ssh)
+  - [Region](#region)
+  - [SSH Key](#ssh-key)
+  - [Network Interface Controller (NIC)](#network-interface-controller-nic)
+  - [Virtual Machine (VM)](#virtual-machine-vm)
+  - [Network Security Group (NSG)](#network-security-group-nsg)
+
 ![text](../images/vm_architecture_diagram.pdf)
 
 ## Virtual Network (VNet)
