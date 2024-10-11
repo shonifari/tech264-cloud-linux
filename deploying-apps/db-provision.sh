@@ -16,7 +16,6 @@ echo Done!
  
 # Download and add MongoDB GPG key for package verification
 echo Adding MongoDB GPG key...
-sudo rm -f /usr/share/keyrings/mongodb-server-7.0.gpg # Remove key if one exists
 curl -fsSL https://www.mongodb.org/static/pgp/server-7.0.asc | sudo gpg --yes -o /usr/share/keyrings/mongodb-server-7.0.gpg --dearmor
 echo Done!
  
@@ -52,10 +51,10 @@ echo Done!
  
 # Modify MongoDB configuration to allow remote connections
 echo Configuring MongoDB to allow remote connections...
-sudo sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mongod.conf
-echo Done!
- 
+sudo sed -i 's/bindIp: 127.0.0.1/bindIp: 0.0.0.0/' /etc/mongod.conf
+echo Done! 
+
 # Restart MongoDB service to apply configurations
 echo Restarting MongoDB service...
-sudo systemctl start mongod
+sudo systemctl restart mongod
 echo Done!
