@@ -1,5 +1,51 @@
-# Creating a image
+# Virtual Machine Images in Azure
 
-```bash
-sudo waagent -deprovision+user -y
-```
+- [Virtual Machine Images in Azure](#virtual-machine-images-in-azure)
+  - [What is an Image and Why Use It?](#what-is-an-image-and-why-use-it)
+  - [Creating an image](#creating-an-image)
+    - [Steps to Create an Image](#steps-to-create-an-image)
+
+## What is an Image and Why Use It?
+
+An **image** in Azure is a template that contains a pre-configured operating system and, optionally, other software. Images are used to create new VMs with the same configuration, ensuring consistency across deployments. They are particularly useful for:
+
+- **Scaling:** Quickly deploy multiple VMs with the same setup.
+- **Consistency:** Ensure all VMs have the same configuration and software.
+- **Backup:** Create a snapshot of a VM's state that can be restored later.
+- **Testing:** Easily create test environments that mirror production setups.
+
+By using images, you can streamline the deployment process, reduce errors, and maintain a consistent environment across your infrastructure.
+
+## Creating an image
+
+Creating an image of a virtual machine (VM) in Azure allows you to capture the state of a VM, including its operating system, data disks, and configurations. This image can then be used to create new VMs with the same setup, ensuring consistency and saving time.
+
+### Steps to Create an Image
+
+1. **Select Capture Image on the VM of choice's Overview.**
+   - Navigate to the Azure portal, go to the **Virtual machines** section, and select the VM you want to capture.
+   - On the VM's overview page, click on **Capture**.
+
+2. **Under Instance details, Select No, capture only a managed image.**
+   - In the **Create an image** page, under **Instance details**, choose **No, capture only a managed image**. This option ensures that the image is stored as a managed image in Azure.
+
+3. **Enable Automatically delete this virtual machine after creating the image.**
+   - If you want to delete the source VM after the image is created, enable this option. This is useful for cleaning up resources you no longer need.
+
+4. **Name the image appropriately.**
+   - Provide a meaningful name for the image to easily identify it later.
+
+5. **Run `sudo waagent -deprovision+user` inside our DB SSH to remove information we no longer need, then return to Azure window.**
+   - Connect to the VM via SSH and run the following command to deprovision the VM:
+
+     ```sh
+     sudo waagent -deprovision+user
+     ```
+
+   - This command removes machine-specific information, making the image suitable for creating new VMs.
+
+6. **Add tags.**
+   - Add any necessary tags to the image for better organization and management.
+
+7. **Review, then create.**
+   - Review all the settings and click **Create** to start the image creation process.
