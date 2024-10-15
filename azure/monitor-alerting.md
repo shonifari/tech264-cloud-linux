@@ -18,6 +18,8 @@
 4. **Customize Layout**: Drag and drop tiles to customize the layout of your dashboard.
 5. **Save and Share**: Save your dashboard and share it with your team if needed.
 
+---
+
 ### How Load Testing and the Dashboard Helped Us
 
 - **Load Testing**: Simulated high traffic to identify performance bottlenecks and ensure the system can handle peak loads.

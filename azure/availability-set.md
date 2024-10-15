@@ -26,7 +26,7 @@ An **Availability Zone** is a physically separate zone within an Azure region. E
 ### Why Superior to an Availability Set?
 
 - **Higher Fault Tolerance**: Availability zones provide fault tolerance across multiple datacenters, offering higher resilience against datacenter-level failures.
-- **99.99% SLA**: Provides a higher SLA compared to availability sets.
+- **99.99% SLA**: Provides a higher SLA (Servers Level Agreement) compared to availability sets.
 
 ### Disadvantages
 
@@ -34,6 +34,8 @@ An **Availability Zone** is a physically separate zone within an Azure region. E
 - **Complexity**: Managing resources across multiple zones can be more complex.
 
 ## What is a Virtual Machine Scale Set?
+
+[How to set up Scale Sets on Azure](scale-sets.md)
 
 A **Virtual Machine Scale Set (VMSS)** allows you to create and manage a group of load-balanced VMs. VMSS can automatically increase or decrease the number of VM instances in response to demand or a defined schedule.
 
