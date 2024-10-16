@@ -3,7 +3,7 @@
 REPO="tech264-sparta-app"
 
 # Set DB_HOST variable 
-export DB_HOST="mongodb://10.0.3.4:27017/posts"
+export DB_HOST="mongodb://10.0.4.4:27017/posts"
 
 cd /$REPO/app/
 
