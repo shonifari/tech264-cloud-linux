@@ -22,12 +22,8 @@
     - [Controlled Access](#controlled-access)
     - [Network Security](#network-security)
     - [Availability Zones](#availability-zones)
-  - [Create the NVA VM](#create-the-nva-vm)
-    - [Basics](#basics-4)
-    - [Networking](#networking-2)
-    - [Review and Create](#review-and-create-4)
   - [Route Tables](#route-tables)
-    - [Review and Create](#review-and-create-5)
+    - [Review and Create](#review-and-create-4)
     - [Routes under Settings](#routes-under-settings)
     - [Subnet under Settings](#subnet-under-settings)
     - [Network Settings under Networking for your NVA](#network-settings-under-networking-for-your-nva)
@@ -141,28 +137,6 @@ By implementing this 3-subnet architecture, we create a robust and secure enviro
 
 ---
 
-## Create the NVA VM
-
-Now we create the VM for the Network Virtual Appliance (NVA). This performs network functions like routing, firewalling, trafic filtering and load balancing.
-
-### Basics
-
-1. Name it appropriately (tech264-name-in-3-subnet-nva).
-2. Select **zone 2** for avaialiblity zone assigned to the NVA.
-3. Select **Standard security** as it may have changed.
-4. Select **see all images** and find the **clean-image**.
-5. Leave SSH as the only port.
-
-### Networking
-
-1. Use the **DMZ subnet**.
-2. Leave the public IP initially. later on if we used in production, we wouldn't.
-
-### Review and Create
-
-1. **Ensure** you've selected the correct options.
-2. **Create** your shiny new NVA.
-
 ## Route Tables
 
 Used to define how network traffic is directed within a network and between different networks.
@@ -193,8 +167,8 @@ Now we need to associate the route table to where the traffic comes out of.
 ### Subnet under Settings
 
 1. Click **Associate**.
-1. Choose your virtual network.
-2. Select the **public-subnet**.
+2. Choose your virtual network.
+3. Select the **public-subnet**.
 
 ### Network Settings under Networking for your NVA
 
