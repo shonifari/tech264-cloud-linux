@@ -1,0 +1,1 @@
+[text](2-tier-app-deployment.md#6-add-inbound-port-rules)
