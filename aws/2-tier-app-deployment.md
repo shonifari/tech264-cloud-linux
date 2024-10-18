@@ -13,6 +13,8 @@
 
 This guide will walk you through the steps to deploy an application using a 2-tier architecture on AWS. The architecture consists of an application tier and a database tier.
 
+![alt text](<tech264 (7).png>)
+
 ## Steps to Deploy
 
 ### 1. Launch EC2 Instances
