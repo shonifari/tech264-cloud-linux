@@ -7,9 +7,8 @@
     - [3. Select Instance Type](#3-select-instance-type)
     - [4. Key Pair Login](#4-key-pair-login)
     - [5. Network Settings](#5-network-settings)
-    - [6. Add Inbound Port Rules](#6-add-inbound-port-rules)
-    - [7. Advanced Details](#7-advanced-details)
-    - [8. Review and Launch](#8-review-and-launch)
+    - [6. Advanced Details](#6-advanced-details)
+    - [7. Review and Launch](#7-review-and-launch)
   - [Conclusion](#conclusion)
 
 This guide will walk you through the steps to deploy an application using a 2-tier architecture on AWS. The architecture consists of an application tier and a database tier.
@@ -23,7 +22,9 @@ This guide will walk you through the steps to deploy an application using a 2-ti
 
 2. **Launch Instances**:
    - Navigate to **Instances** and select **Launch Instances** on the right.
-![alt text](../images/aws-ec2-launch.png)
+
+        ![alt text](../images/aws-ec2-launch.png)
+
 3. **Input an Appropriate Name**:
    - Provide a name for your instance.
 
@@ -55,8 +56,13 @@ This guide will walk you through the steps to deploy an application using a 2-ti
    - Select **Create security group**. *Remember, you need a **UNIQUE** security group for each VM.*
 
 2. **Allow Traffic**:
-   - For the **Database** EC2, allow **SSH** traffic.
-   - For the **App** EC2, allow **SSH** & **HTTP** traffic.
+   - For the **Database** EC2:
+     - allow **SSH** traffic
+     - allow **MongoDB** traffic on port **27017** with source the app's **Security Group**
+
+   - For the **App** EC2:
+     - allow **SSH** traffic
+     - allow **HTTP** traffic.
 
 3. **Create Subnets**:
    - For the **Database**, create a **private** subnet.
@@ -66,21 +72,12 @@ This guide will walk you through the steps to deploy an application using a 2-ti
    - Use `172.31.2.0/24` for your **app**.
    - Use `172.31.3.0/24` for your **database**.
 
-### 6. Add Inbound Port Rules
-
-1. **Navigate to Security Groups**:
-   - Under **Network and Security**, search for the NSG you wish to modify.
-
-2. **Edit Inbound Rules**:
-   - Select **Edit inbound rules**.
-   - For the DB's NSG, add a rule that has `Custom TCP` for the type, 27017 for port range and then search for the NSG of the App in the input next to the **Source** row. Do the opposite for the App.
-
-### 7. Advanced Details
+### 6. Advanced Details
 
 1. **User Data**:
    - Locate user data and input the relevant data for the **EC2**.
 
-### 8. Review and Launch
+### 7. Review and Launch
 
 1. **Review Details**:
    - Review your details and then launch the instance.
