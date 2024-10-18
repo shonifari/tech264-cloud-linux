@@ -56,11 +56,11 @@ This guide will walk you through the steps to deploy an application using a 2-ti
    - Select **Create security group**. *Remember, you need a **UNIQUE** security group for each VM.*
 
 2. **Allow Traffic**:
-   - For the **Database** EC2:
+   - For the **Database** Security Group:
      - allow **SSH** traffic
      - allow **MongoDB** traffic on port **27017** with source the app's **Security Group**
 
-   - For the **App** EC2:
+   - For the **App** Security Group:
      - allow **SSH** traffic
      - allow **HTTP** traffic.
 
