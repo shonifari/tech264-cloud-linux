@@ -4,7 +4,7 @@
 # Created on: 10/10/2024
 
 GH_REPO="https://github.com/shonifari/tech264-sparta-app.git"
-REPO="tech264-sparta-app"
+REPO="repo"
 MONGODB_HOST="mongodb://10.0.3.4:27017"
 
 # Update Linux source list
